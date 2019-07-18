@@ -16,7 +16,7 @@ The reposity is released under the Apache-2.0 License (refer to the LICENSE file
 * **tensorflow (version: 1.13.1)**: tensorflow installation instructions are available at `https://www.tensorflow.org/`.
 
 ## demo
-for using the code, you have to do something else:
+For using the code, you have to do something else:
 
 ### preparation
 * download [data folder](https://drive.google.com/file/d/1LsSEDZS2wbthcNZeqBXdfE-hNCIc6Cif/view?usp=sharing), this folder contains `training data` from baseline position and `testing data` from shift position.
