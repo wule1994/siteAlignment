@@ -19,8 +19,8 @@ The repository is released under the Apache-2.0 License (refer to the LICENSE fi
 For using the code, you have to do something else:
 
 ### preparation
-* download [data folder](https://drive.google.com/file/d/1LsSEDZS2wbthcNZeqBXdfE-hNCIc6Cif/view?usp=sharing), this folder contains `training data` from baseline position and `testing data` from shift position.
-* download [model folder](https://drive.google.com/file/d/1aC1t7AHnsG10E6x76A6kFEUHyfSIpcrJ/view?usp=sharing), this folder includes `VGG16 weight` and a `pretrained model`. The pretrained model trained only with the data from the baseline position.
+* download data folder (from [google driver](https://drive.google.com/file/d/1LsSEDZS2wbthcNZeqBXdfE-hNCIc6Cif/view?usp=sharing) or [baidu net disk](https://pan.baidu.com/s/1Xz9yrlO6h7HltbchAAJHSw)), this folder contains `training data` from baseline position and `testing data` from shift position.
+* download model folder(from [google driver](https://drive.google.com/file/d/1aC1t7AHnsG10E6x76A6kFEUHyfSIpcrJ/view?usp=sharing) or [baidu net disk](https://pan.baidu.com/s/1tO8TskdZ-rZrdAsngANX8Q)), this folder includes `VGG16 weight` and a `pretrained model`. The pretrained model trained only with the data from the baseline position.
 
 For more details, you can referring to the correspond code files or leave a message in the issue.
 
