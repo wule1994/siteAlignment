@@ -9,7 +9,7 @@ Overview of the proposed method. Given the current electrode array as an example
 
 ### License
 
-The reposity is released under the Apache-2.0 License (refer to the LICENSE file for details).
+The repository is released under the Apache-2.0 License (refer to the LICENSE file for details).
 
 ## Installing dependencies
 * **Keras (version: 2.2.4)**: we use tensorflow backend. The Keras installation and introduction are available at `https://keras.io/`.
@@ -20,7 +20,7 @@ For using the code, you have to do something else:
 
 ### preparation
 * download [data folder](https://drive.google.com/file/d/1LsSEDZS2wbthcNZeqBXdfE-hNCIc6Cif/view?usp=sharing), this folder contains `training data` from baseline position and `testing data` from shift position.
-* download [model folder](https://drive.google.com/file/d/1aC1t7AHnsG10E6x76A6kFEUHyfSIpcrJ/view?usp=sharing), this folder includes `VGG16 weight` and a `pretrined model`. The pretrained model trained only with the data from the baseline position.
+* download [model folder](https://drive.google.com/file/d/1aC1t7AHnsG10E6x76A6kFEUHyfSIpcrJ/view?usp=sharing), this folder includes `VGG16 weight` and a `pretrained model`. The pretrained model trained only with the data from the baseline position.
 
 For more details, you can referring to the correspond code files or leave a message in the issue.
 
@@ -37,6 +37,6 @@ To get the results, you need to input the following sentence:
 python demo.py
 ```
 ***Note: if you use the model trained by yourself, please uncomment line 181 and comment line 182 in the demo.py.***
-The final classfication accuracy is 0.9762. The confusion matrix and alignment matrix are also printed in the window.
+The final classification accuracy is 0.9762. The confusion matrix and alignment matrix are also printed in the window.
 
 ![](./image/result.png "results")
