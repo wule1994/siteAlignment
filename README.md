@@ -1,11 +1,11 @@
-# Adaptive Calibration of Electrode Array Shifts toward Robust Myoelectric Control
+# Adaptive Calibration of Electrode Array Shifts Enables Robust Myoelectric Control
 By [Xu Zhang](https://est.ustc.edu.cn/2015/0729/c4618a42767/page.psp), [Le Wu](https://github.com/wule1994), Bin Yu, [Xiang Chen](https://scholar.google.com/citations?hl=en&user=JURnq4QAAAAJ), [Xun Chen](http://staff.ustc.edu.cn/~xunchen/index.htm)
 
-This code is to automatic and adaptive calibration of electrode array and assist to enhance robustness of myoelectric control systems. The code is developed based on the Keras framwork.
+This document contains tutorial for running the codes associated with the method reported in the paper entitled "adaptive calibration of electrode array shifts enables robust myoelectric control". The code is developed based on the Keras framwork.
 
-## Introduction
+## Principle
 ![](./image/flowchart.png "flowchart of the proposed method")
-Overview of the proposed method. Given the current electrode array as an example, we assumed that any electrode shift was no greater than 7mm along both the proximal/distal and left/right directions (any larger deviation can be easily sensed). Therefore, a central region, covered by the central portion of electrode array, is supposed to be always covered by various shift conditions. This region is termed as core recording region (CRR). The classification model only trained with the data from CRR at the baseline position. During the testing phase, given the unknown but reasonably small shift of the electrode array, it is assumed that the muscle area corresponding to the CRR is still covered by the array. Therefore, the myoelectric pattern recognition can be achieved by considering the learnt HD-sEMG image corresponding to the CRR as an object to be detected within the entire array image.
+Given the current electrode array as an example, there was an 8 × 8 subarray in the center of the entire 10 × 10 array. The muscle region, covered by this subarray at the baseline position, was termed core recording region (CRR). Only the data from the CRR were used to train the classification model and any data from other shift locations and the peripheral electrodes around the central subarray were not used. We assumed that any electrode shift was less than 7 mm in the proximal/distal and left/right directions, without loss of generality (any larger shift can be supported by relatively increasing the area of the entire array and decreasing the area of the CRR). During the testing phase, given the unknown but reasonably small shift of the electrode array, the CRR was still covered by the array (Fig. 2b). Therefore, the myoelectric pattern recognition can be achieved by searching and detecting the learned CRR object within the entire array image of a testing sample. Both its location (representing direction and distance of the shift) and pattern label were reported simultaneously. 
 
 ### License
 
@@ -15,8 +15,8 @@ The repository is released under the Apache-2.0 License (refer to the LICENSE fi
 * **Keras (version: 2.2.4)**: we use tensorflow backend. The Keras installation and introduction are available at `https://keras.io/`.
 * **tensorflow (version: 1.13.1)**: tensorflow installation instructions are available at `https://www.tensorflow.org/`.
 
-## demo
-For using the code, you have to do something else:
+## Demonstration with an exemplary dataset
+This is a demo when running our codes on an exempleary dataset, which can also be publicly downloaded via the same link as the source codes. Here are step-by-step instructions from downloading both the source codes and the data to result display:
 
 ### preparation
 * download data folder (from [google driver](https://drive.google.com/file/d/1LsSEDZS2wbthcNZeqBXdfE-hNCIc6Cif/view?usp=sharing) or [baidu net disk](https://pan.baidu.com/s/1Xz9yrlO6h7HltbchAAJHSw)), this folder contains `training data` from baseline position and `testing data` from shift position.
@@ -24,19 +24,19 @@ For using the code, you have to do something else:
 
 For more details, you can referring to the correspond code files or leave a message in the issue.
 
-### training
+### Training
 Then, you just input the following sentence to train it.
 ```bash
 python train.py
 ```
 ***Or you can skip this step using our pretrained model.***
 
-### Result
-To get the results, you need to input the following sentence:
+### Testing & Result display
+To obtain the results by running the program for testing, you need to type and operate the following instruction:
 ```bash
 python demo.py
 ```
-***Note: if you use the model trained by yourself, please uncomment line 181 and comment line 182 in the demo.py.***
-The final classification accuracy is 0.9762. The confusion matrix and alignment matrix are also printed in the window.
+***Note: if the classification model needs to be customized and re-trained, please uncomment line 181 and comment line 182 in the code file “demo.py.”***
+The final classification accuracy is 0.9762. After the program is implemented, a confusion matrix and an alignment matrix are also displayed in the window. According to the alignment matrix, our method is able to predict that the array was shifted in the left-proximal direction. It is truly the case.
 
 ![](./image/result.png "results")
