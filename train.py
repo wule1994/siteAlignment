@@ -123,7 +123,7 @@ SemgModel.load_weights('./model/vgg16_weights.h5',by_name = True)
 
 adam = optimizers.Adam(lr=0.001)
 SemgModel.compile(optimizer =adam, loss ="categorical_crossentropy",metrics =["accuracy"])
-model.fit_generator(generate_arrays_from_file('/my_file.txt'),samples_per_epoch=10000, nb_epoch=10)
+SemgModel.fit(x=X_train_interpolation,y=Y_train,epochs=10,batch_size=32,shuffle=True,validation_split=0.05)
 
 adam = optimizers.Adam(lr=0.0001)
 SemgModel.compile(optimizer =adam, loss ="categorical_crossentropy",metrics =["accuracy"])
