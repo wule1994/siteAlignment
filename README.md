@@ -1,7 +1,9 @@
 # Adaptive Calibration of Electrode Array Shifts Enables Robust Myoelectric Control
 By [Xu Zhang](https://est.ustc.edu.cn/2015/0729/c4618a42767/page.psp), [Le Wu](https://github.com/wule1994), Bin Yu, [Xiang Chen](https://scholar.google.com/citations?hl=en&user=JURnq4QAAAAJ), [Xun Chen](http://staff.ustc.edu.cn/~xunchen/index.htm)
 
-This document contains tutorial for running the codes associated with the method reported in the paper entitled "adaptive calibration of electrode array shifts enables robust myoelectric control". The code is developed based on the Keras framwork.
+This document contains tutorial for running the codes associated with the method reported in the paper entitled "adaptive calibration of electrode array shifts enables robust myoelectric control", whcih has been accepted by TBME. You can refer to "https://ieeexplore.ieee.org/document/8895996" for the published paper, and if you build upon our work, please cite our work with:
+X. Zhang, L. Wu, B. Yu, X. Chen, and X. Chen, “Adaptive Calibration of Electrode Array Shifts Enables Robust Myoelectric Control,” IEEE Transactions on Biomedical Engineering, pp. 1-1, 2019.
+
 
 ## Principle
 ![](./image/flowchart.png "flowchart of the proposed method")
@@ -12,6 +14,7 @@ Given the current electrode array as an example, there was an 8 × 8 subarray in
 The repository is released under the Apache-2.0 License (refer to the LICENSE file for details).
 
 ## Installing dependencies
+The code is developed based on the Keras framwork.
 * **Keras (version: 2.2.4)**: we use tensorflow backend. The Keras installation and introduction are available at `https://keras.io/`.
 * **tensorflow (version: 1.13.1)**: tensorflow installation instructions are available at `https://www.tensorflow.org/`.
 
